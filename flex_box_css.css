@@ -1,0 +1,126 @@
+html,body{
+	margin: 0;
+	padding:0;
+	height: 100%;
+	width:100%;
+	background-color: silver;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.ghost{
+	height: 400px;
+	width: 200px;
+	animation: floating-ghost;
+	animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+	
+}
+
+@keyframes floating-ghost {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.ghost-shadow{
+	height: 50px;
+	width: 200px;
+	background-color: black;
+	position: relative;
+	border-radius: 50%;
+	animation: floating-ghost-shadow;
+	animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes floating-ghost-shadow{
+    0% { transform: scale(1); }
+    50%  { transform: scale(0.8); }
+    100%   { transform: scale(1); }   
+}
+
+.head{
+	height: 130px;
+	width: 100%;
+	background-color: white;
+	border-radius: 50%;
+}
+.body{
+	height: 130px;
+	width: 100%;
+	background-color: white;
+	position: relative;
+	bottom:16%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.eyes{
+	height:40%;
+	width:100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+.eye{
+	height: 100%;
+	width:20%;
+	background-color: black;
+	border-radius: 50%;
+}
+.blink-eye:hover{
+	animation: blinkeye;
+	animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+
+ }
+@keyframes blinkeye{
+	0%{height: 100%;}
+	5%{height:60%;}
+	10%{height:100%;}
+	}
+
+
+.mouth{
+	height: 30%;
+	width: 50%;
+	background-color: black;
+	border-radius: 50%;
+	position: relative;
+	top: 25%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.mouth:hover{
+	animation: MouthMoving;
+	animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+
+ }
+@keyframes MouthMoving{
+	0%{height: 30%;}
+	5%{height:10%;}
+	10%{height:30%;}
+	}
+
+
+.tail{
+	height: 130px;
+	width: 100%;
+	background-color: white;
+	position: relative;
+	bottom: 16%;
+	clip-path: polygon(0% 0%, 0% 100%, 20% 84%, 48% 100%, 71% 86%, 100% 100%, 100% 0%);
+}
+
